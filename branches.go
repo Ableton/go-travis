@@ -51,7 +51,7 @@ type getBranchResponse struct {
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#builds
 func (bs *BranchesService) ListFromRepository(slug string) ([]Branch, *http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/repos/%v/branches", slug), nil)
+	u, err := urlWithOptions(fmt.Sprintf("repos/%v/branches", slug), nil)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -75,7 +75,7 @@ func (bs *BranchesService) ListFromRepository(slug string) ([]Branch, *http.Resp
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#builds
 func (bs *BranchesService) Get(repoSlug string, branchId uint) (*Branch, *http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/repos/%v/branches/%d", repoSlug, branchId), nil)
+	u, err := urlWithOptions(fmt.Sprintf("repos/%v/branches/%d", repoSlug, branchId), nil)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -99,7 +99,7 @@ func (bs *BranchesService) Get(repoSlug string, branchId uint) (*Branch, *http.R
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#builds
 func (bs *BranchesService) GetFromSlug(repoSlug string, branchSlug string) (*Branch, *http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/repos/%v/branches/%v", repoSlug, branchSlug), nil)
+	u, err := urlWithOptions(fmt.Sprintf("repos/%v/branches/%v", repoSlug, branchSlug), nil)
 	if err != nil {
 		return nil, nil, err
 	}

@@ -74,7 +74,7 @@ type getRepositoryResponse struct {
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#repositories
 func (rs *RepositoriesService) Find(opt *RepositoryListOptions) ([]Repository, *http.Response, error) {
-	u, err := urlWithOptions("/repos", opt)
+	u, err := urlWithOptions("repos", opt)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -97,7 +97,7 @@ func (rs *RepositoriesService) Find(opt *RepositoryListOptions) ([]Repository, *
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#repositories
 func (rs *RepositoriesService) GetFromSlug(slug string) (*Repository, *http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/repos/%s", slug), nil)
+	u, err := urlWithOptions(fmt.Sprintf("repos/%s", slug), nil)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -120,7 +120,7 @@ func (rs *RepositoriesService) GetFromSlug(slug string) (*Repository, *http.Resp
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#repositories
 func (rs *RepositoriesService) Get(id uint) (*Repository, *http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/repos/%d", id), nil)
+	u, err := urlWithOptions(fmt.Sprintf("repos/%d", id), nil)
 	if err != nil {
 		return nil, nil, err
 	}

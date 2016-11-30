@@ -72,7 +72,7 @@ type BuildListOptions struct {
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#builds
 func (bs *BuildsService) List(opt *BuildListOptions) ([]Build, []Job, []Commit, *http.Response, error) {
-	u, err := urlWithOptions("/builds", opt)
+	u, err := urlWithOptions("builds", opt)
 	if err != nil {
 		return nil, nil, nil, nil, err
 	}
@@ -95,7 +95,7 @@ func (bs *BuildsService) List(opt *BuildListOptions) ([]Build, []Job, []Commit, 
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#builds
 func (bs *BuildsService) ListFromRepository(slug string, opt *BuildListOptions) ([]Build, []Job, []Commit, *http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/repos/%v/builds", slug), opt)
+	u, err := urlWithOptions(fmt.Sprintf("repos/%v/builds", slug), opt)
 	if err != nil {
 		return nil, nil, nil, nil, err
 	}
@@ -118,7 +118,7 @@ func (bs *BuildsService) ListFromRepository(slug string, opt *BuildListOptions) 
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#builds
 func (bs *BuildsService) Get(id uint) (*Build, []Job, *Commit, *http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/builds/%d", id), nil)
+	u, err := urlWithOptions(fmt.Sprintf("builds/%d", id), nil)
 	if err != nil {
 		return nil, nil, nil, nil, err
 	}
@@ -141,7 +141,7 @@ func (bs *BuildsService) Get(id uint) (*Build, []Job, *Commit, *http.Response, e
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#builds
 func (bs *BuildsService) Cancel(id uint) (*http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/builds/%d/cancel", id), nil)
+	u, err := urlWithOptions(fmt.Sprintf("builds/%d/cancel", id), nil)
 	if err != nil {
 		return nil, err
 	}
@@ -163,7 +163,7 @@ func (bs *BuildsService) Cancel(id uint) (*http.Response, error) {
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#builds
 func (bs *BuildsService) Restart(id uint) (*http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/builds/%d/restart", id), nil)
+	u, err := urlWithOptions(fmt.Sprintf("builds/%d/restart", id), nil)
 	if err != nil {
 		return nil, err
 	}

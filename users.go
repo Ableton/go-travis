@@ -42,7 +42,7 @@ type getUserResponse struct {
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#users
 func (us *UsersService) GetAuthenticated() (*User, *http.Response, error) {
-	u, err := urlWithOptions("/users/", nil)
+	u, err := urlWithOptions("users/", nil)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -65,7 +65,7 @@ func (us *UsersService) GetAuthenticated() (*User, *http.Response, error) {
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#users
 func (us *UsersService) Get(userId uint) (*User, *http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/users/%d", userId), nil)
+	u, err := urlWithOptions(fmt.Sprintf("users/%d", userId), nil)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -90,7 +90,7 @@ func (us *UsersService) Get(userId uint) (*User, *http.Response, error) {
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#users
 func (us *UsersService) Sync() (*http.Response, error) {
-	u, err := urlWithOptions("/users/sync", nil)
+	u, err := urlWithOptions("users/sync", nil)
 	if err != nil {
 		return nil, err
 	}

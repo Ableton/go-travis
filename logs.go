@@ -39,7 +39,7 @@ type getLogResponse struct {
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#logs
 func (ls *LogsService) Get(logId uint) (*Log, *http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/logs/%d", logId), nil)
+	u, err := urlWithOptions(fmt.Sprintf("logs/%d", logId), nil)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -62,7 +62,7 @@ func (ls *LogsService) Get(logId uint) (*Log, *http.Response, error) {
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#logs
 func (ls *LogsService) GetByJob(jobId uint) (*Log, *http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/jobs/%d/log", jobId), nil)
+	u, err := urlWithOptions(fmt.Sprintf("jobs/%d/log", jobId), nil)
 	if err != nil {
 		return nil, nil, err
 	}

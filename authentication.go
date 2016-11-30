@@ -28,7 +28,7 @@ func (as *AuthenticationService) UsingGithubToken(githubToken string) (AccessTok
 	if githubToken == "" {
 		return "", nil, fmt.Errorf("unable to authenticate client; empty github token provided")
 	}
-	var u string = "/auth/github"
+	var u string = "auth/github"
 	var b map[string]string = map[string]string{"github_token": githubToken}
 
 	req, err := as.client.NewRequest("POST", u, b, nil)

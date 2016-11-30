@@ -91,7 +91,7 @@ func (jfo *JobFindOptions) IsValid() bool {
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#jobs
 func (js *JobsService) Get(id uint) (*Job, *http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/jobs/%d", id), nil)
+	u, err := urlWithOptions(fmt.Sprintf("jobs/%d", id), nil)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -114,7 +114,7 @@ func (js *JobsService) Get(id uint) (*Job, *http.Response, error) {
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#jobs
 func (js *JobsService) ListFromBuild(buildId uint) ([]Job, *http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/builds/%d", buildId), nil)
+	u, err := urlWithOptions(fmt.Sprintf("builds/%d", buildId), nil)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -145,7 +145,7 @@ func (js *JobsService) Find(opt *JobFindOptions) ([]Job, *http.Response, error) 
 		)
 	}
 
-	u, err := urlWithOptions("/jobs", opt)
+	u, err := urlWithOptions("jobs", opt)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -168,7 +168,7 @@ func (js *JobsService) Find(opt *JobFindOptions) ([]Job, *http.Response, error) 
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#jobs
 func (js *JobsService) Cancel(id uint) (*http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/jobs/%d/cancel", id), nil)
+	u, err := urlWithOptions(fmt.Sprintf("jobs/%d/cancel", id), nil)
 	if err != nil {
 		return nil, err
 	}
@@ -190,7 +190,7 @@ func (js *JobsService) Cancel(id uint) (*http.Response, error) {
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#jobs
 func (js *JobsService) Restart(id uint) (*http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/jobs/%d/restart", id), nil)
+	u, err := urlWithOptions(fmt.Sprintf("jobs/%d/restart", id), nil)
 	if err != nil {
 		return nil, err
 	}

@@ -40,7 +40,7 @@ type Commit struct {
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#builds
 func (cs *CommitsService) GetFromBuild(buildId uint) (*Commit, *http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/builds/%d", buildId), nil)
+	u, err := urlWithOptions(fmt.Sprintf("builds/%d", buildId), nil)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -63,7 +63,7 @@ func (cs *CommitsService) GetFromBuild(buildId uint) (*Commit, *http.Response, e
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#builds
 func (cs *CommitsService) ListFromRepository(repositorySlug string) ([]Commit, *http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/repos/%s/builds", repositorySlug), nil)
+	u, err := urlWithOptions(fmt.Sprintf("repos/%s/builds", repositorySlug), nil)
 	if err != nil {
 		return nil, nil, err
 	}

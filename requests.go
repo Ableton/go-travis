@@ -67,7 +67,7 @@ type RequestsListOptions struct {
 //
 // Travis CI API docs: http://docs.travis-ci.com/api/#builds
 func (rs *RequestsService) Get(requestId uint) (*Request, *Commit, *http.Response, error) {
-	u, err := urlWithOptions(fmt.Sprintf("/requests/%d", requestId), nil)
+	u, err := urlWithOptions(fmt.Sprintf("requests/%d", requestId), nil)
 	if err != nil {
 		return nil, nil, nil, err
 	}
@@ -96,7 +96,7 @@ func (rs *RequestsService) ListFromRepository(slug string, opt *RequestsListOpti
 		opt = &RequestsListOptions{Slug: slug}
 	}
 
-	u, err := urlWithOptions("/requests", opt)
+	u, err := urlWithOptions("requests", opt)
 	if err != nil {
 		return nil, nil, nil, err
 	}
