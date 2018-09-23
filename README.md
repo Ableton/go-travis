@@ -174,6 +174,9 @@ Travis API, so contributions are of course [always welcome][contributing].
 
 This library design is heavily inspired from the amazing Google's [go-github](https://github.com/google/go-github) library. Some pieces of code have been directly extracted from there too. Therefore any obvious similarities would not be adventitious.
 
+## Alternatives
+- [shuheiktgw/go-travis](https://github.com/shuheiktgw/go-travis) - Forked from Ableton/go-travis and supports [Travis API V3](https://developer.travis-ci.com/)
+
 ## License
 
 This library is distributed under the BSD-style license found in the [LICENSE](./LICENSE)
