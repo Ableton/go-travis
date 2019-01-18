@@ -1,10 +1,15 @@
+# This Repository is Unmaintained
+
+This repository is currently unmaintained, please do not use it for new projects. You may
+be interested in [@shuheiktgw](https://github.com/shuheiktgw)'s fork, which has been
+updated to use the Travis v3 API. It is available here:
+https://github.com/shuheiktgw/go-travis.
+
 # go-travis
 
 go-travis is a Go client library for accessing the [Travis CI API](http://docs.travis-ci.com/api/).
 
 **Documentation:** [![GoDoc](https://godoc.org/github.com/Ableton/go-travis/travis?status.svg)](https://godoc.org/github.com/Ableton/go-travis)
-
-**Build Status:** [![Build Status](https://travis-ci.org/Ableton/go-travis.svg?branch=master)](https://travis-ci.org/Ableton/go-travis)
 
 go-travis requires Go version 1.1 or greater.
 
@@ -152,23 +157,6 @@ for {
         }
 }
 ```
-
-## Roadmap
-
-This library is being initially developed for internal applications at
-[Ableton](http://ableton.com). Therefore API methods are implemented in the order that they are
-needed by our applications. Eventually, we would like to cover the entire
-Travis API, so contributions are of course [always welcome][contributing].
-
-[contributing]: CONTRIBUTING.md
-
-## Maintainers
-
-* [@mst-ableton](https://github.com/mst-ableton)
-
-## Maintainers-Emeritus
-
-* Theo Crevon <theo.crevon@ableton.com>
 
 ## Disclaimer
 
