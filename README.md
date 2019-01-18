@@ -4,8 +4,6 @@ go-travis is a Go client library for accessing the [Travis CI API](http://docs.t
 
 **Documentation:** [![GoDoc](https://godoc.org/github.com/Ableton/go-travis/travis?status.svg)](https://godoc.org/github.com/Ableton/go-travis)
 
-**Build Status:** [![Build Status](https://travis-ci.org/Ableton/go-travis.svg?branch=master)](https://travis-ci.org/Ableton/go-travis)
-
 go-travis requires Go version 1.1 or greater.
 
 ## Dive
