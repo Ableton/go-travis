@@ -151,14 +151,6 @@ for {
 }
 ```
 
-## Maintainers
-
-* [@mst-ableton](https://github.com/mst-ableton)
-
-## Maintainers-Emeritus
-
-* Theo Crevon <theo.crevon@ableton.com>
-
 ## Disclaimer
 
 This library design is heavily inspired from the amazing Google's [go-github](https://github.com/google/go-github) library. Some pieces of code have been directly extracted from there too. Therefore any obvious similarities would not be adventitious.
