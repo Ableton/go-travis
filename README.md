@@ -1,3 +1,10 @@
+# This Repository is Unmaintained
+
+This repository is currently unmaintained, please do not use it for new projects. You may
+be interested in [@shuheiktgw](https://github.com/shuheiktgw)'s fork, which has been
+updated to use the Travis v3 API. It is available here:
+https://github.com/shuheiktgw/go-travis.
+
 # go-travis
 
 go-travis is a Go client library for accessing the [Travis CI API](http://docs.travis-ci.com/api/).
