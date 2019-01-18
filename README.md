@@ -151,15 +151,6 @@ for {
 }
 ```
 
-## Roadmap
-
-This library is being initially developed for internal applications at
-[Ableton](http://ableton.com). Therefore API methods are implemented in the order that they are
-needed by our applications. Eventually, we would like to cover the entire
-Travis API, so contributions are of course [always welcome][contributing].
-
-[contributing]: CONTRIBUTING.md
-
 ## Maintainers
 
 * [@mst-ableton](https://github.com/mst-ableton)
